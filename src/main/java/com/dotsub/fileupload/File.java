@@ -16,11 +16,16 @@ public class File {
   private String title;
   private String description;
   private Date creationDate;
+  private String name;
 
-  public File(String title, String description, Date creationDate) {
+  public File() {
+  }
+
+  public File(String title, String description, Date creationDate, String name) {
     this.title = title;
     this.description = description;
     this.creationDate = creationDate;
+    this.name = name;
   }
 
   public long getId() {
@@ -55,12 +60,21 @@ public class File {
     this.creationDate = creationDate;
   }
 
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
   @Override
   public String toString() {
     return "File [" 
     + "title=" + title
     + ", description=" + description 
     + ", creationDate=" + creationDate 
+    + ", name=" + name
     + "]";
   }
 
